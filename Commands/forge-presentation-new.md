@@ -1,13 +1,15 @@
-# Forge: Presentation — Generate
+# Forge: Presentation — New
 
 Generate a Slidev presentation deck from a Forge artifact.
 
 ## Steps
 
-1. **Get artifact path.** If not provided, ask: "Which artifact should I turn into a presentation?
-   Provide the file path."
+1. **Identify artifact.** If not provided, ask: "Which artifact should I turn into a presentation?
+   (e.g. 'the API redesign proposal' or 'last week's exploration')"
+   Search the workspace for a matching file — check `Initiatives/`, `Products/`, and the workspace
+   root. If multiple matches are found, ask the user to clarify.
 
-2. **Read artifact.** Read the file at the given path. Extract:
+2. **Read artifact.** Read the matched file. Extract:
    - `title` from frontmatter or the first `#` heading
    - `status` from frontmatter if present
    - All `##` section headings and their content
@@ -28,4 +30,4 @@ Generate a Slidev presentation deck from a Forge artifact.
    run `/forge-presentation-start` or from the workspace root:
    `npx --prefix Plugins/presentation slidev Presentations/<slug>.md`.
 
-**Awaiting your direction.** Which artifact should I generate a presentation from?
+**Awaiting your direction.** Which artifact should I turn into a presentation?

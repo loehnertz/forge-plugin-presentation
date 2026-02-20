@@ -22,7 +22,7 @@ NOT distributed (in `_exclude`):
 ## Plugin Conventions
 
 - Plugin `name`: `presentation` (lowercase, no hyphens — used as the namespace)
-- Commands: `forge-presentation-<verb>.md` (e.g., `forge-presentation-generate.md`)
+- Commands: `forge-presentation-<verb>.md` (e.g., `forge-presentation-new.md`)
 - Templates: `<Type>.md` (e.g., `Presentation.md`)
 - Plugin context: `AGENTS.md` (AI-readable; describes what this plugin provides)
 

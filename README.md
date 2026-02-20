@@ -6,8 +6,9 @@ artifact — Proposals, Decisions, Explorations, and more.
 
 ## What It Provides
 
-- `/forge-presentation-generate` — Read a Forge artifact and generate a Slidev presentation from it
+- `/forge-presentation-new` — Find a Forge artifact by name/topic and generate a Slidev presentation
 - `/forge-presentation-start` — List available decks and start the Slidev dev server
+- `/forge-presentation-export` — Export a deck to PDF, PPTX, or both
 - `Templates/Presentation.md` — Slidev Markdown skeleton for manually crafting presentations
 - A ready-to-run Slidev environment (`package.json` + `Themes/`)
 
@@ -39,10 +40,11 @@ npm install
 
 ## Usage
 
-### Generate a presentation
+### Create a presentation
 
-Invoke `/forge-presentation-generate` in your AI tool. You will be asked which artifact to convert.
-The generated deck is written to `Presentations/<slug>.md` at the workspace root.
+Invoke `/forge-presentation-new` in your AI tool. Describe the artifact by name or topic — the AI
+will find it in your workspace. The generated deck is written to `Presentations/<slug>.md` at the
+workspace root.
 
 ### Preview a presentation
 
@@ -53,6 +55,20 @@ npx --prefix Plugins/presentation slidev Presentations/<deck-name>.md
 ```
 
 Slidev opens the browser at `http://localhost:3030`. Press `Ctrl+C` to stop.
+
+### Export a presentation
+
+Invoke `/forge-presentation-export` in your AI tool, or run from the workspace root:
+
+```bash
+# PDF (recommended)
+npx --prefix Plugins/presentation slidev export Presentations/<deck-name>.md --format pdf
+
+# PPTX
+npx --prefix Plugins/presentation slidev export Presentations/<deck-name>.md --format pptx
+```
+
+> **Note:** PDF export is reliable. PPTX export may not preserve all animations or layouts.
 
 ## Theme Customization
 
