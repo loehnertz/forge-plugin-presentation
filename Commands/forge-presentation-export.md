@@ -21,10 +21,10 @@ Export a presentation deck to PDF, PPTX, or both.
 5. **Show the command(s).** Tell the user to run from the workspace root in their terminal:
 
    For PDF:
-       npx --prefix Plugins/presentation slidev export <path-to-deck> --format pdf
+   npx --prefix Plugins/presentation slidev export <path-to-deck> --format pdf
 
    For PPTX:
-       npx --prefix Plugins/presentation slidev export <path-to-deck> --format pptx
+   npx --prefix Plugins/presentation slidev export <path-to-deck> --format pptx
 
    The exported file(s) will be written to the same `Presentations/` folder as the source deck.
 

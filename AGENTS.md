@@ -6,6 +6,7 @@ and provides commands to generate slide decks from any Forge artifact.
 ## What This Plugin Provides
 
 **Commands:**
+
 - `/forge-presentation-new` — Find a Forge artifact by name/topic and generate a Slidev presentation
   from it. Output goes to `Presentations/<slug>.md` inside the same initiative folder as the source
   artifact.
@@ -14,6 +15,7 @@ and provides commands to generate slide decks from any Forge artifact.
 - `/forge-presentation-export` — Export a deck to PDF, PPTX, or both via `slidev export`.
 
 **Templates:**
+
 - `Presentation.md` — Slidev Markdown skeleton for manually crafting a presentation.
 
 ## Setup

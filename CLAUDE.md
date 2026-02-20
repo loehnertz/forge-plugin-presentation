@@ -9,6 +9,7 @@ presentation generation. Plugins are distributed via Copier — everything not i
 ## What Gets Distributed
 
 Distributed to workspace (everything NOT in `_exclude`):
+
 - `AGENTS.md` — plugin context for AI tools
 - `package.json` — Slidev dependencies
 - `.gitignore` — excludes node_modules from workspace git
@@ -17,6 +18,7 @@ Distributed to workspace (everything NOT in `_exclude`):
 - `Themes/` — custom themes directory
 
 NOT distributed (in `_exclude`):
+
 - `copier.yml`, `forge-plugin.yml`, `README.md`, `CLAUDE.md`, `.git`
 
 ## Plugin Conventions

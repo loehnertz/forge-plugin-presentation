@@ -10,23 +10,23 @@ Generate a Slidev presentation deck from a Forge artifact.
    root. If multiple matches are found, ask the user to clarify.
 
 2. **Read artifact.** Read the matched file. Extract:
-   - `title` from frontmatter or the first `#` heading
-   - `status` from frontmatter if present
-   - All `##` section headings and their content
+    - `title` from frontmatter or the first `#` heading
+    - `status` from frontmatter if present
+    - All `##` section headings and their content
 
 3. **Derive output path.** Slugify the title: lowercase, spaces replaced with hyphens.
    Place the deck in a `Presentations/` subfolder alongside the source artifact:
-   - Artifact at `Initiatives/<Initiative>/Proposal.md` →
-     `Initiatives/<Initiative>/Presentations/<slug>.md`
-   - Artifact at `Products/<Product>/Initiatives/<Initiative>/Proposal.md` →
-     `Products/<Product>/Initiatives/<Initiative>/Presentations/<slug>.md`
-   Create the `Presentations/` directory if it does not exist.
+    - Artifact at `Initiatives/<Initiative>/Proposal.md` →
+      `Initiatives/<Initiative>/Presentations/<slug>.md`
+    - Artifact at `Products/<Product>/Initiatives/<Initiative>/Proposal.md` →
+      `Products/<Product>/Initiatives/<Initiative>/Presentations/<slug>.md`
+      Create the `Presentations/` directory if it does not exist.
 
 4. **Generate deck.** Using `Plugins/presentation/Templates/Presentation.md` as a structural
    guide, produce a Slidev Markdown file:
-   - Title slide: artifact title, status if available, today's date
-   - One slide per major `##` section (trim prose to bullets; keep slides concise)
-   - Closing "Next Steps" or "Questions?" slide
+    - Title slide: artifact title, status if available, today's date
+    - One slide per major `##` section (trim prose to bullets; keep slides concise)
+    - Closing "Next Steps" or "Questions?" slide
 
 5. **Write output.** Write the generated deck to the path derived in step 3.
 
