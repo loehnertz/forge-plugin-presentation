@@ -7,8 +7,10 @@ and provides commands to generate slide decks from any Forge artifact.
 
 **Commands:**
 - `/forge-slideshow-generate` — Read a Forge artifact (Proposal, Decision, Exploration, etc.) and
-  generate a Slidev presentation from it. Output goes to `Plugins/slideshow/decks/<slug>.md`.
-- `/forge-slideshow-start` — List available decks and start the Slidev dev server.
+  generate a Slidev presentation from it. Output goes to `Presentations/<slug>.md` at the workspace
+  root.
+- `/forge-slideshow-start` — List available decks in `Presentations/` and start the Slidev dev
+  server.
 
 **Templates:**
 - `Slideshow-Presentation.md` — Slidev Markdown skeleton for manually crafting a presentation.
@@ -19,8 +21,9 @@ After installing this plugin, run once inside `Plugins/slideshow/`:
 
     npm install
 
-Generated decks land in `Plugins/slideshow/decks/`. To add a custom Slidev theme, place it in
-`Plugins/slideshow/themes/` and reference it in the deck's frontmatter (`theme: ./themes/<name>`).
+Generated decks land in `Presentations/` at the workspace root. To add a custom Slidev theme,
+place it in `Plugins/slideshow/Themes/` and reference it in the deck's frontmatter
+(`theme: ./Themes/<name>`).
 
 ## Prerequisites
 

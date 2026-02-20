@@ -9,7 +9,7 @@ artifact — Proposals, Decisions, Explorations, and more.
 - `/forge-slideshow-generate` — Read a Forge artifact and generate a Slidev presentation from it
 - `/forge-slideshow-start` — List available decks and start the Slidev dev server
 - `Templates/Slideshow-Presentation.md` — Slidev Markdown skeleton for manually crafting presentations
-- A ready-to-run Slidev environment (`package.json` + `themes/` + `decks/`)
+- A ready-to-run Slidev environment (`package.json` + `Themes/`)
 
 ## Install
 
@@ -42,27 +42,26 @@ npm install
 ### Generate a presentation
 
 Invoke `/forge-slideshow-generate` in your AI tool. You will be asked which artifact to convert.
-The generated deck is written to `Plugins/slideshow/decks/<slug>.md`.
+The generated deck is written to `Presentations/<slug>.md` at the workspace root.
 
 ### Preview a presentation
 
-Invoke `/forge-slideshow-start`, or run directly:
+Invoke `/forge-slideshow-start`, or run from the workspace root:
 
 ```bash
-cd Plugins/slideshow
-npx slidev decks/<deck-name>.md
+npx --prefix Plugins/slideshow slidev Presentations/<deck-name>.md
 ```
 
 Slidev opens the browser at `http://localhost:3030`. Press `Ctrl+C` to stop.
 
 ## Theme Customization
 
-Drop a Slidev-compatible theme directory into `Plugins/slideshow/themes/`, then reference it in
+Drop a Slidev-compatible theme directory into `Plugins/slideshow/Themes/`, then reference it in
 a deck's frontmatter:
 
 ```yaml
 ---
-theme: ./themes/<theme-name>
+theme: ./Themes/<theme-name>
 ---
 ```
 
@@ -72,5 +71,5 @@ theme: ./themes/<theme-name>
 copier update Plugins/slideshow
 ```
 
-This pulls the latest plugin files. Your generated decks in `decks/` and custom themes in
-`themes/` are not affected by updates.
+This pulls the latest plugin files. Your generated decks in `Presentations/` and custom themes in
+`Plugins/slideshow/Themes/` are not affected by updates.

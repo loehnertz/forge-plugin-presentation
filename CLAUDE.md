@@ -14,8 +14,7 @@ Distributed to workspace (everything NOT in `_exclude`):
 - `.gitignore` — excludes node_modules from workspace git
 - `Commands/` — command files
 - `Templates/` — artifact templates
-- `themes/` — custom themes directory
-- `decks/` — generated presentations directory
+- `Themes/` — custom themes directory
 
 NOT distributed (in `_exclude`):
 - `copier.yml`, `forge-plugin.yml`, `README.md`, `CLAUDE.md`, `.git`
