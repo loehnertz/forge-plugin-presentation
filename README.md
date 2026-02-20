@@ -43,8 +43,9 @@ npm install
 ### Create a presentation
 
 Invoke `/forge-presentation-new` in your AI tool. Describe the artifact by name or topic — the AI
-will find it in your workspace. The generated deck is written to `Presentations/<slug>.md` at the
-workspace root.
+will find it in your workspace. The generated deck is written to a `Presentations/` subfolder
+inside the same initiative as the source artifact (e.g.
+`Initiatives/<Initiative>/Presentations/<slug>.md`).
 
 ### Preview a presentation
 
@@ -87,5 +88,5 @@ theme: ./Themes/<theme-name>
 copier update Plugins/presentation
 ```
 
-This pulls the latest plugin files. Your generated decks in `Presentations/` and custom themes in
-`Plugins/presentation/Themes/` are not affected by updates.
+This pulls the latest plugin files. Your generated decks (inside initiative `Presentations/`
+folders) and custom themes in `Plugins/presentation/Themes/` are not affected by updates.

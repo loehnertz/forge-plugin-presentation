@@ -14,8 +14,13 @@ Generate a Slidev presentation deck from a Forge artifact.
    - `status` from frontmatter if present
    - All `##` section headings and their content
 
-3. **Derive deck name.** Slugify the title: lowercase, spaces replaced with hyphens. The output
-   file will be `Presentations/<slug>.md` at the workspace root.
+3. **Derive output path.** Slugify the title: lowercase, spaces replaced with hyphens.
+   Place the deck in a `Presentations/` subfolder alongside the source artifact:
+   - Artifact at `Initiatives/<Initiative>/Proposal.md` →
+     `Initiatives/<Initiative>/Presentations/<slug>.md`
+   - Artifact at `Products/<Product>/Initiatives/<Initiative>/Proposal.md` →
+     `Products/<Product>/Initiatives/<Initiative>/Presentations/<slug>.md`
+   Create the `Presentations/` directory if it does not exist.
 
 4. **Generate deck.** Using `Plugins/presentation/Templates/Presentation.md` as a structural
    guide, produce a Slidev Markdown file:
@@ -23,11 +28,10 @@ Generate a Slidev presentation deck from a Forge artifact.
    - One slide per major `##` section (trim prose to bullets; keep slides concise)
    - Closing "Next Steps" or "Questions?" slide
 
-5. **Write output.** Write the generated deck to `Presentations/<slug>.md`. Create the
-   `Presentations/` directory if it does not exist.
+5. **Write output.** Write the generated deck to the path derived in step 3.
 
 6. **Report.** Tell the user the output path, the slide count, and how to preview it:
    run `/forge-presentation-start` or from the workspace root:
-   `npx --prefix Plugins/presentation slidev Presentations/<slug>.md`.
+   `npx --prefix Plugins/presentation slidev <output-path>`.
 
 **Awaiting your direction.** Which artifact should I turn into a presentation?
