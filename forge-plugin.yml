@@ -1,5 +1,5 @@
-name: slideshow
-display-name: Slideshow Presentations
+name: presentation
+display-name: Presentations
 description: Generate and serve Slidev presentations from any Forge artifact
 version: v1.0
 author: loehnertz

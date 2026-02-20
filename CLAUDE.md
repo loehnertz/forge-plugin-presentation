@@ -1,10 +1,10 @@
-# CLAUDE.md — forge-plugin-slideshow
+# CLAUDE.md — forge-plugin-presentation
 
 ## What This Repository Is
 
-This is the **forge-plugin-slideshow** plugin repository. It extends Forge workspaces with Slidev
+This is the **forge-plugin-presentation** plugin repository. It extends Forge workspaces with Slidev
 presentation generation. Plugins are distributed via Copier — everything not in `copier.yml`'s
-`_exclude` is copied into `Plugins/slideshow/` when a workspace installs this plugin.
+`_exclude` is copied into `Plugins/presentation/` when a workspace installs this plugin.
 
 ## What Gets Distributed
 
@@ -21,15 +21,15 @@ NOT distributed (in `_exclude`):
 
 ## Plugin Conventions
 
-- Plugin `name`: `slideshow` (lowercase, no hyphens — used as the namespace)
-- Commands: `forge-slideshow-<verb>.md` (e.g., `forge-slideshow-generate.md`)
-- Templates: `Slideshow-<Type>.md` (e.g., `Slideshow-Presentation.md`)
+- Plugin `name`: `presentation` (lowercase, no hyphens — used as the namespace)
+- Commands: `forge-presentation-<verb>.md` (e.g., `forge-presentation-generate.md`)
+- Templates: `<Type>.md` (e.g., `Presentation.md`)
 - Plugin context: `AGENTS.md` (AI-readable; describes what this plugin provides)
 
 ## Testing Changes Locally
 
 ```bash
-copier copy . /tmp/test-ws/Plugins/slideshow --defaults
+copier copy . /tmp/test-ws/Plugins/presentation --defaults
 ```
 
 Verify the installed files match expectations (meta files absent, distributed files present).

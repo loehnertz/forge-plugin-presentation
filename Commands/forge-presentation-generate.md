@@ -1,4 +1,4 @@
-# Forge: Slideshow — Generate
+# Forge: Presentation — Generate
 
 Generate a Slidev presentation deck from a Forge artifact.
 
@@ -15,7 +15,7 @@ Generate a Slidev presentation deck from a Forge artifact.
 3. **Derive deck name.** Slugify the title: lowercase, spaces replaced with hyphens. The output
    file will be `Presentations/<slug>.md` at the workspace root.
 
-4. **Generate deck.** Using `Plugins/slideshow/Templates/Slideshow-Presentation.md` as a structural
+4. **Generate deck.** Using `Plugins/presentation/Templates/Presentation.md` as a structural
    guide, produce a Slidev Markdown file:
    - Title slide: artifact title, status if available, today's date
    - One slide per major `##` section (trim prose to bullets; keep slides concise)
@@ -25,7 +25,7 @@ Generate a Slidev presentation deck from a Forge artifact.
    `Presentations/` directory if it does not exist.
 
 6. **Report.** Tell the user the output path, the slide count, and how to preview it:
-   run `/forge-slideshow-start` or from the workspace root:
-   `npx --prefix Plugins/slideshow slidev Presentations/<slug>.md`.
+   run `/forge-presentation-start` or from the workspace root:
+   `npx --prefix Plugins/presentation slidev Presentations/<slug>.md`.
 
 **Awaiting your direction.** Which artifact should I generate a presentation from?
