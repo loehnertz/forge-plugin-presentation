@@ -1,0 +1,39 @@
+# Forge: Presentation — New
+
+Generate a Slidev presentation deck from a Forge artifact.
+
+## Steps
+
+1. **Resolve artifact.**
+   - If an artifact was named or described in the invocation, search `Initiatives/` and `Products/`
+     for a match and confirm it with the user before proceeding.
+   - If no artifact was specified, search `Initiatives/` and `Products/` for all Forge artifacts
+     (any `Exploration.md`, `Proposal.md`, `Decision.md`, or equivalent). Present a numbered list
+     with each artifact's title and initiative path, then ask the user to pick one.
+
+2. **Read artifact.** Read the selected file. Extract:
+   - `title` from frontmatter or the first `#` heading
+   - `status` from frontmatter if present
+   - All `##` section headings and their content
+
+3. **Derive output path.** Slugify the title: lowercase, spaces replaced with hyphens.
+   Place the deck in a `Presentations/` subfolder alongside the source artifact:
+   - Artifact at `Initiatives/<Initiative>/Proposal.md` →
+     `Initiatives/<Initiative>/Presentations/<slug>.md`
+   - Artifact at `Products/<Product>/Initiatives/<Initiative>/Proposal.md` →
+     `Products/<Product>/Initiatives/<Initiative>/Presentations/<slug>.md`
+   Create the `Presentations/` directory if it does not exist.
+
+4. **Generate deck.** Using `Plugins/presentation/Templates/Presentation.md` as a structural
+   guide, produce a Slidev Markdown file:
+   - Title slide: artifact title, status if available, today's date
+   - One slide per major `##` section (trim prose to bullets; keep slides concise)
+   - Closing "Next Steps" or "Questions?" slide
+
+5. **Write output.** Write the generated deck to the path derived in step 3.
+
+6. **Report.** Tell the user the output path, the slide count, and how to preview it:
+   run `/forge-presentation-start` or from the workspace root:
+   `npx --prefix Plugins/presentation slidev <output-path>`.
+
+**Awaiting your direction.** Which artifact should I turn into a presentation?

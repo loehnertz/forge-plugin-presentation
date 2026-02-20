@@ -1,0 +1,35 @@
+# Presentations Plugin
+
+This plugin sets up a [Slidev](https://sli.dev/) presentation environment in `Plugins/presentation/`
+and provides commands to generate slide decks from any Forge artifact.
+
+## What This Plugin Provides
+
+**Commands:**
+
+- `/forge-presentation-new` — Find a Forge artifact by name/topic and generate a Slidev presentation
+  from it. Output goes to `Presentations/<slug>.md` inside the same initiative folder as the source
+  artifact.
+- `/forge-presentation-start` — List available decks across all initiative `Presentations/`
+  subfolders and start the Slidev dev server.
+- `/forge-presentation-export` — Export a deck to PDF, PPTX, or both via `slidev export`.
+
+**Templates:**
+
+- `Presentation.md` — Slidev Markdown skeleton for manually crafting a presentation.
+
+## Setup
+
+After installing this plugin, run once inside `Plugins/presentation/`:
+
+    npm install
+
+Generated decks land in a `Presentations/` subfolder inside the initiative that contains the source
+artifact (e.g. `Initiatives/<Initiative>/Presentations/<slug>.md`). To add a custom Slidev theme,
+place it in `Plugins/presentation/Themes/` and reference it in the deck's frontmatter
+(`theme: ./Themes/<name>`).
+
+## Prerequisites
+
+- Node.js installed
+- `npm install` run inside `Plugins/presentation/` after first install

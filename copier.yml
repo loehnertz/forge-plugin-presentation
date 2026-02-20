@@ -1,0 +1,9 @@
+_min_copier_version: "9.0.0"
+_exclude:
+  - "copier.yml"
+  - "forge-plugin.yml"
+  - "README.md"
+  - "CLAUDE.md"
+  - ".git"
+  - "~*"
+  - "*.py[co]"
