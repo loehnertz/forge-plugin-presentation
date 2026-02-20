@@ -10,8 +10,8 @@ and provides commands to generate slide decks from any Forge artifact.
 - `/forge-presentation-new` — Find a Forge artifact by name/topic and generate a Slidev presentation
   from it. Output goes to `Presentations/<slug>.md` inside the same initiative folder as the source
   artifact.
-- `/forge-presentation-start` — List available decks in `Presentations/` and start the Slidev dev
-  server.
+- `/forge-presentation-start` — List available decks across all initiative `Presentations/`
+  subfolders and start the Slidev dev server.
 - `/forge-presentation-export` — Export a deck to PDF, PPTX, or both via `slidev export`.
 
 **Templates:**

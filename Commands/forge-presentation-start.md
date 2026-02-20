@@ -15,7 +15,7 @@ Start the Slidev dev server to preview or edit a presentation deck.
 
 2. **Ensure dependencies.** If `node_modules/` does not exist in `Plugins/presentation/`, run:
 
-       npm install --prefix Plugins/presentation
+       cd Plugins/presentation && npm install
 
 3. **Start the dev server.** Run the following command as a background task from the workspace
    root, so the server keeps running while the conversation continues:

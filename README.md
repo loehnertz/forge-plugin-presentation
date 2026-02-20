@@ -68,10 +68,10 @@ Invoke `/forge-presentation-export` in your AI tool, or run from the workspace r
 
 ```bash
 # PDF (recommended)
-npx --prefix Plugins/presentation slidev export Presentations/<deck-name>.md --format pdf
+npx --prefix Plugins/presentation slidev export <path-to-deck> --format pdf --output <path-to-deck-without-ext>.pdf
 
 # PPTX
-npx --prefix Plugins/presentation slidev export Presentations/<deck-name>.md --format pptx
+npx --prefix Plugins/presentation slidev export <path-to-deck> --format pptx --output <path-to-deck-without-ext>.pptx
 ```
 
 > **Note:** PDF export is reliable. PPTX export may not preserve all animations or layouts.
