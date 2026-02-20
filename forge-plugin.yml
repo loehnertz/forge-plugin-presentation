@@ -1,0 +1,7 @@
+name: slideshow
+display-name: Slideshow Presentations
+description: Generate and serve Slidev presentations from any Forge artifact
+version: v1.0
+author: loehnertz
+min-forge-version: v1.9
+tags: [presentation, output]
