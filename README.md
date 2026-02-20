@@ -12,6 +12,11 @@ artifact — Proposals, Decisions, Explorations, and more.
 - `Templates/Presentation.md` — Slidev Markdown skeleton for manually crafting presentations
 - A ready-to-run Slidev environment (`package.json` + `Themes/`)
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (includes `npm`) must be installed on your machine.
+  The plugin uses `npm` to install Slidev and run it locally.
+
 ## Install
 
 ### 1. Copy the plugin into your workspace

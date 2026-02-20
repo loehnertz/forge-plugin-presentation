@@ -13,13 +13,16 @@ Start the Slidev dev server to preview or edit a presentation deck.
      first. Otherwise present a numbered list with each deck's title and initiative path, then ask
      the user to pick one.
 
-2. **First-time setup check.** If `node_modules/` does not exist in `Plugins/presentation/`, remind
-   the user to run `npm install` inside that folder first.
+2. **Ensure dependencies.** If `node_modules/` does not exist in `Plugins/presentation/`, run:
 
-3. **Show the command.** Tell the user to run from the workspace root in their terminal:
+       npm install --prefix Plugins/presentation
+
+3. **Start the dev server.** Run the following command as a background task from the workspace
+   root, so the server keeps running while the conversation continues:
 
        npx --prefix Plugins/presentation slidev <path-to-deck>
 
-   Slidev will open the browser at `http://localhost:3030`. Press `Ctrl+C` to stop.
+4. **Report.** Tell the user the server is running at `http://localhost:3030` and that they can
+   stop it by killing the background task.
 
 **Awaiting your direction.** Which deck should I start?

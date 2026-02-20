@@ -19,19 +19,19 @@ Export a presentation deck to PDF, PPTX, or both.
    Note: PDF export is reliable and recommended for sharing. PPTX export is supported but may not
    preserve all animations or layouts perfectly.
 
-3. **First-time setup check.** If `node_modules/` does not exist in `Plugins/presentation/`, remind
-   the user to run `npm install` inside that folder first.
+3. **Ensure dependencies.** If `node_modules/` does not exist in `Plugins/presentation/`, run:
 
-4. **Show the command(s).** Tell the user to run from the workspace root in their terminal:
+       npm install --prefix Plugins/presentation
+
+4. **Run the export.** Run the relevant command(s) from the workspace root:
 
    For PDF:
-   npx --prefix Plugins/presentation slidev export <path-to-deck> --format pdf
+       npx --prefix Plugins/presentation slidev export <path-to-deck> --format pdf
 
    For PPTX:
-   npx --prefix Plugins/presentation slidev export <path-to-deck> --format pptx
+       npx --prefix Plugins/presentation slidev export <path-to-deck> --format pptx
 
-   The exported file(s) will be written to the same `Presentations/` folder as the source deck.
-
-5. **Report.** Once the user has run the command, confirm the output path(s).
+5. **Report.** Tell the user the output path(s) where the exported file(s) were written
+   (same `Presentations/` folder as the source deck).
 
 **Awaiting your direction.** Which deck should I export, and in what format?
