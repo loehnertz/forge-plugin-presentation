@@ -1,8 +1,8 @@
 {
   "name": "slidev-presentations",
   "private": true,
-"dependencies": {
-    "@slidev/cli": "latest",
-    "@slidev/theme-default": "latest"
+  "dependencies": {
+    "@slidev/cli": "^51.8.2",
+    "@slidev/theme-default": "^0.22.1"
   }
 }

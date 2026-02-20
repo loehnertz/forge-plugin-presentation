@@ -24,6 +24,12 @@ After installing this plugin, run once inside `Plugins/presentation/`:
 
     npm install
 
+**Running a deck:** Always invoke Slidev from inside `Plugins/presentation/` and pass the theme
+explicitly, because Slidev cannot resolve the theme when the deck lives outside this directory:
+
+    node_modules/.bin/slidev "<absolute-deck-path>" \
+      --theme "$(pwd)/node_modules/@slidev/theme-default" --no-open
+
 Generated decks land in a `Presentations/` subfolder inside the initiative that contains the source
 artifact (e.g. `Initiatives/<Initiative>/Presentations/<slug>.md`). To add a custom Slidev theme,
 place it in `Plugins/presentation/Themes/` and reference it in the deck's frontmatter
