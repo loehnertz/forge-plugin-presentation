@@ -1,4 +1,5 @@
 _min_copier_version: "9.0.0"
+_answers_file: .copier-answers.yml
 _exclude:
   - "copier.yml"
   - "forge-plugin.yml"
